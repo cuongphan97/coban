@@ -1,5 +1,8 @@
 #include <iostream>
 #include <stdio.h>
+#include <string>
+
+using namespace std;
 
 int tinh_tong(int a, int b) {
 
@@ -26,57 +29,62 @@ int hamso(int a, int b, int c, int d, int e){
 }
 
 //todo: viet ham in ra tu 1->10 dung do...while
-void lap_doWhile(int n, int i)
+void lap_doWhile(int n)
 {
-    printf("nhap vao gia tri n: ");
-    scanf("%d",&n);
+    int i=0;
     do
         printf("%d\n",i);
     while(i++,i<=n);
 }
 //todo: viet ham in ra tu 1->10 dung while
-void lap_while(int n, int i)
+void lap_while(int n)
 {
-    printf("nhap vao gia tri n: ");
-    scanf("%d",&n);
+    int i=0;
     while(i++,i<=n)
         printf("%d\n",i);
 }
-//todo: viet ham in ra tu 1->10 dung for
-void lap_for(int n, int i)
+//todo: viet ham in ra tu 1->n dung for
+void lap_for(int n)
 {
-    printf("nhap vao gia tri n: ");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int i;
+    for( i=1;i<=n;i++)
         printf("%d\n",i);
 }
 //todo: viet ham tinh tong so tu 1->10, vi du: 1+2+....+10.
-void tong_1denN(int n,int i,int s)
+int tong_1denN(int f)
 {
-    printf("nhap vao gia tri n: ");
-    scanf("%d",&n);
-    while(i++,i<=n)
+   int i=0,s=0;
+    while(i++,i<=f)
         s=s+i;
-    printf("%d",s);
-}
-//main cho tat ca
-int main()
-{
-    int n,i,j=0,k=1,s=0;
-    lap_for(n,i);
-    lap_while(n,j);
-    lap_doWhile(n,k);
-    tong_1denN(n,j,s);
+    return s;
 }
 
+//todo: viet ham giai phuong trinh bac hai
 
+//todo: viet ham hoan doi gia tri 2 so a va b
+
+//todo: viet chuong trinh tinh binh phuong cua mot so
+
+//todo: viet ham nhap vao n xuat ra so hang an cua cap so cong Sn=1+2+5+7+....
+
+//todo: viet ham nhap vao n xuat ra so hang an cua cap so nhan: an = 2*2^(n-1)e
+
+//todo: tim so Fibonacci thu n; so fibonacci F = 0, 1, 1, 2, 3, 5, 8, 13,....
+
+
+using namespace std;
 int main() {
-    int __a = 1, b = 10, c, e=10,f=1;
-    c = tinh_tong(__a, b);
-    printf("hieu la %d \n", tinh_hieu(e,f));
-    printf("ket qua: %d \n", c);
-    printf("ket qua tich: %d \n",tich(9,10) );
-    printf("ket qua chia %d \n", chia(30,6));
-    return 0;
+    string fff;
+    string hello = "dfsdfdsf";
 
+    const char *d =  "egrg0";
+    printf(d);
+
+    int n;
+    cout <<"Nhap vao so n";
+    cin  >> n;
+//    printf("nhap vao gia tri n: ");
+    scanf("%d",&n);
+
+    printf("ket:%d",tong_1denN(n));
 }
