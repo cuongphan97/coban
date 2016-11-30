@@ -1,9 +1,7 @@
 #include <iostream>
-#include <stdio.h>
-#include <string>
-
+#include <cstdio>
+#include <cmath>
 using namespace std;
-
 int tinh_tong(int a, int b) {
 
     return a + b;
@@ -60,8 +58,32 @@ int tong_1denN(int f)
 }
 
 //todo: viet ham giai phuong trinh bac hai
+void pt_bac2()
+{
+    float a,b,c,d,x1,x2;
+    if(!a){
+        if(!b)
+            cout << "Ca a va b khong the cung bang 0 trong phuong trinh ax^2 + bx + c = 0" << endl;
+        else
+        {
+            d=-c/b;
+            cout << "Phuong trinh co nghiem duy nhat : " << d << endl;
+        }
+    }
+    else
+    {
+        d=b*b-4*a*c;
+        if(d>0)
+            x1=(-b+sqrt(d))/(2*a);
+            x2=(-b-sqrt(d))/(2*a);
+        cout << "Nghiem thu nhat x1 = " << x1 << endl;
+        cout << "Nghiem thu hai x2 = " << x2 << endl;
+    }
+}
+
 
 //todo: viet ham hoan doi gia tri 2 so a va b
+
 
 //todo: viet chuong trinh tinh binh phuong cua mot so
 
@@ -72,19 +94,24 @@ int tong_1denN(int f)
 //todo: tim so Fibonacci thu n; so fibonacci F = 0, 1, 1, 2, 3, 5, 8, 13,....
 
 
-using namespace std;
-int main() {
-    string fff;
-    string hello = "dfsdfdsf";
 
-    const char *d =  "egrg0";
-    printf(d);
-
-    int n;
-    cout <<"Nhap vao so n";
-    cin  >> n;
+int main()
+{
+//    string fff;
+//    string hello = "dfsdfdsf";
+//
+//    const char *d =  "egrg0";
+//    printf(d);
+//
+//    int n;
+//    cout<<"Nhap vao so n";
+//    cin  >> n;
 //    printf("nhap vao gia tri n: ");
-    scanf("%d",&n);
-
-    printf("ket:%d",tong_1denN(n));
+//    scanf("%d",&n);
+//
+//    printf("ket:%d",tong_1denN(n));
+    float a,b,c;
+    cout << "Nhap a,b,c: " << endl;
+    cin >> a >> b >> c;
+    pt_bac2();
 }
