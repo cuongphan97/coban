@@ -84,16 +84,36 @@ void pt_bac2(float a,float b,float c) {
 
 
 //todo: viet ham hoan doi gia tri 2 so a va b
-
-
+void hoan_doi(int a, int b)
+{
+    int tam;
+    tam=a;
+    a=b;
+    b=tam;
+    printf("a=%d, b=%d",a,b);
+}
 //todo: viet chuong trinh tinh binh phuong cua mot so
+int binh_phuong(int a)
+{
+    return a*a;
+}
+//todo: viet ham nhap vao n xuat ra so hang an cua cap so cong Sn=1+3+5+7+....
+int cap_so_cong(int n)
+{
+    int d=2,a1=1;
+    return a1+(n-1)*d;
 
-//todo: viet ham nhap vao n xuat ra so hang an cua cap so cong Sn=1+2+5+7+....
-
+}
 //todo: viet ham nhap vao n xuat ra so hang an cua cap so nhan: an = 2*2^(n-1)e
-
+float cap_so_nhan(int n)
+{
+    float e=2.72;
+    return 2*pow(2,(n-1)*e);
+}
 //todo: tim so Fibonacci thu n; so fibonacci F = 0, 1, 1, 2, 3, 5, 8, 13,....
-
+int fibonacci(int n)
+{
+}
 
 
 int main() {
@@ -110,8 +130,17 @@ int main() {
 //    scanf("%d",&n);
 //
 //    printf("ket:%d",tong_1denN(n));
-    float a, b, c;
-    cout << "Nhap a,b,c: " << endl;
-    cin >> a >> b >> c;
-    pt_bac2(a,b,c);
+//    float a, b, c;
+//    cout << "Nhap a,b,c: " << endl;
+//    cin >> a >> b >> c;
+//    pt_bac2(a,b,c);
+//    int a,b;
+//    printf("nhap a,b: ");
+//    scanf("%d%d",&a,&b);
+//    hoan_doi(a,b);
+//    binh_phuong(3);
+//    printf("%d",binh_phuong(3));
+//    cap_so_cong(5);
+//    printf("%d",cap_so_cong(5));
+    printf("%f",cap_so_nhan(4));
 }
